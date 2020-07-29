@@ -1,0 +1,27 @@
+{
+  "name": "My Chrome Arduino Blink",
+  "version": "1.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "description": "Show off serial functionality connecting to Arduino.",
+
+  "app": {
+    "background": {
+      "scripts": [ "background.js"]
+    }
+  },
+
+  "icons": {
+    "16": "assets/icon-16x16.jpeg",
+    "128": "assets/icon-128x128.jpeg"
+  },
+
+  "externally_connectable": {
+    "matches": ["*://127.0.0.1/*", "*://localhost/*", "*://192.168.88.164/*"],
+    "ids": ["*"]
+  },
+
+  "permissions": [
+    "serial"
+  ]
+}
